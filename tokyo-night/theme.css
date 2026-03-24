@@ -1,0 +1,44 @@
+/*
+ * Tokyo Night Theme for Bulwark Mail
+ * Inspired by https://github.com/enkia/tokyo-night-vscode-theme
+ */
+
+:root {
+  --color-border: #d5d6db;
+  --color-input: #d5d6db;
+  --color-ring: #34548a;
+  --color-background: #d5d6db;
+  --color-foreground: #343b58;
+  --color-primary: #34548a;
+  --color-primary-foreground: #d5d6db;
+  --color-secondary: #c4c5cb;
+  --color-secondary-foreground: #343b58;
+  --color-muted: #cbccd1;
+  --color-muted-foreground: #6a6e7a;
+  --color-accent: #34548a;
+  --color-accent-foreground: #d5d6db;
+  --color-destructive: #8c4351;
+  --color-destructive-foreground: #d5d6db;
+  --color-popover: #d5d6db;
+  --color-popover-foreground: #343b58;
+}
+
+.dark {
+  --color-border: #292e42;
+  --color-input: #292e42;
+  --color-ring: #7aa2f7;
+  --color-background: #1a1b26;
+  --color-foreground: #a9b1d6;
+  --color-primary: #7aa2f7;
+  --color-primary-foreground: #1a1b26;
+  --color-secondary: #24283b;
+  --color-secondary-foreground: #a9b1d6;
+  --color-muted: #24283b;
+  --color-muted-foreground: #565f89;
+  --color-accent: #292e42;
+  --color-accent-foreground: #7aa2f7;
+  --color-destructive: #f7768e;
+  --color-destructive-foreground: #1a1b26;
+  --color-popover: #24283b;
+  --color-popover-foreground: #a9b1d6;
+}

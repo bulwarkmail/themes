@@ -1,0 +1,44 @@
+/*
+ * Rosé Pine Theme for Bulwark Mail
+ * Inspired by https://rosepinetheme.com
+ */
+
+:root {
+  --color-border: #dfdad9;
+  --color-input: #dfdad9;
+  --color-ring: #d7827e;
+  --color-background: #faf4ed;
+  --color-foreground: #575279;
+  --color-primary: #d7827e;
+  --color-primary-foreground: #faf4ed;
+  --color-secondary: #f2e9e1;
+  --color-secondary-foreground: #575279;
+  --color-muted: #f2e9e1;
+  --color-muted-foreground: #9893a5;
+  --color-accent: #d7827e;
+  --color-accent-foreground: #faf4ed;
+  --color-destructive: #b4637a;
+  --color-destructive-foreground: #faf4ed;
+  --color-popover: #faf4ed;
+  --color-popover-foreground: #575279;
+}
+
+.dark {
+  --color-border: #26233a;
+  --color-input: #26233a;
+  --color-ring: #ebbcba;
+  --color-background: #191724;
+  --color-foreground: #e0def4;
+  --color-primary: #ebbcba;
+  --color-primary-foreground: #191724;
+  --color-secondary: #26233a;
+  --color-secondary-foreground: #e0def4;
+  --color-muted: #26233a;
+  --color-muted-foreground: #6e6a86;
+  --color-accent: #26233a;
+  --color-accent-foreground: #ebbcba;
+  --color-destructive: #eb6f92;
+  --color-destructive-foreground: #191724;
+  --color-popover: #26233a;
+  --color-popover-foreground: #e0def4;
+}

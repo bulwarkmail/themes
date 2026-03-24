@@ -1,0 +1,10 @@
+{
+  "id": "tokyo-night",
+  "name": "Tokyo Night",
+  "version": "1.0.0",
+  "author": "Bulwark Mail Community",
+  "description": "Clean dark theme inspired by Tokyo city lights at night",
+  "type": "theme",
+  "variants": ["light", "dark"],
+  "minAppVersion": "1.0.0"
+}

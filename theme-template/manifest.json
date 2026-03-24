@@ -1,0 +1,10 @@
+{
+  "id": "my-theme",
+  "name": "My Theme",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "description": "A custom theme for Bulwark Mail",
+  "type": "theme",
+  "variants": ["light", "dark"],
+  "minAppVersion": "1.0.0"
+}

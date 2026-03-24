@@ -1,0 +1,10 @@
+{
+  "id": "rose-pine",
+  "name": "Rosé Pine",
+  "version": "1.0.0",
+  "author": "Bulwark Mail Community",
+  "description": "Soho vibes with natural, muted colors and rosy accents",
+  "type": "theme",
+  "variants": ["light", "dark"],
+  "minAppVersion": "1.0.0"
+}

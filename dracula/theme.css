@@ -1,0 +1,44 @@
+/*
+ * Dracula Theme for Bulwark Mail
+ * Inspired by https://draculatheme.com
+ */
+
+:root {
+  --color-border: #d6d6d6;
+  --color-input: #d6d6d6;
+  --color-ring: #7c3aed;
+  --color-background: #f8f8f2;
+  --color-foreground: #282a36;
+  --color-primary: #7c3aed;
+  --color-primary-foreground: #f8f8f2;
+  --color-secondary: #e8e8e0;
+  --color-secondary-foreground: #282a36;
+  --color-muted: #e8e8e0;
+  --color-muted-foreground: #6272a4;
+  --color-accent: #7c3aed;
+  --color-accent-foreground: #f8f8f2;
+  --color-destructive: #ff5555;
+  --color-destructive-foreground: #f8f8f2;
+  --color-popover: #f8f8f2;
+  --color-popover-foreground: #282a36;
+}
+
+.dark {
+  --color-border: #44475a;
+  --color-input: #44475a;
+  --color-ring: #bd93f9;
+  --color-background: #282a36;
+  --color-foreground: #f8f8f2;
+  --color-primary: #bd93f9;
+  --color-primary-foreground: #282a36;
+  --color-secondary: #44475a;
+  --color-secondary-foreground: #f8f8f2;
+  --color-muted: #44475a;
+  --color-muted-foreground: #6272a4;
+  --color-accent: #44475a;
+  --color-accent-foreground: #bd93f9;
+  --color-destructive: #ff5555;
+  --color-destructive-foreground: #f8f8f2;
+  --color-popover: #44475a;
+  --color-popover-foreground: #f8f8f2;
+}

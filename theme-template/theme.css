@@ -1,0 +1,78 @@
+/*
+ * Bulwark Mail Theme Template
+ *
+ * Replace colors below with your palette.
+ * Only :root, .dark, @font-face, @keyframes, and @media selectors are allowed.
+ *
+ * All 16 CSS variables must be defined in both :root (light) and .dark (dark) blocks.
+ */
+
+:root {
+  /* Borders & Inputs */
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #3b82f6;
+
+  /* Base */
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+
+  /* Primary — main action color (buttons, links) */
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary — secondary buttons, tags, chips */
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+
+  /* Muted — disabled, subtle backgrounds, placeholders */
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+
+  /* Accent — hover highlights, selected items */
+  --color-accent: #3b82f6;
+  --color-accent-foreground: #ffffff;
+
+  /* Destructive — delete, error, danger */
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  /* Popover — dropdowns, tooltips, modals */
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+}
+
+.dark {
+  /* Borders & Inputs */
+  --color-border: #334155;
+  --color-input: #334155;
+  --color-ring: #60a5fa;
+
+  /* Base */
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+
+  /* Primary */
+  --color-primary: #60a5fa;
+  --color-primary-foreground: #0f172a;
+
+  /* Secondary */
+  --color-secondary: #1e293b;
+  --color-secondary-foreground: #f8fafc;
+
+  /* Muted */
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+
+  /* Accent */
+  --color-accent: #1e293b;
+  --color-accent-foreground: #60a5fa;
+
+  /* Destructive */
+  --color-destructive: #f87171;
+  --color-destructive-foreground: #0f172a;
+
+  /* Popover */
+  --color-popover: #1e293b;
+  --color-popover-foreground: #f8fafc;
+}

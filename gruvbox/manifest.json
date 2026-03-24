@@ -1,0 +1,10 @@
+{
+  "id": "gruvbox",
+  "name": "Gruvbox",
+  "version": "1.0.0",
+  "author": "Bulwark Mail Community",
+  "description": "Retro groove color scheme with warm earthy tones",
+  "type": "theme",
+  "variants": ["light", "dark"],
+  "minAppVersion": "1.0.0"
+}

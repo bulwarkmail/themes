@@ -1,0 +1,44 @@
+/*
+ * Gruvbox Theme for Bulwark Mail
+ * Inspired by https://github.com/morhetz/gruvbox
+ */
+
+:root {
+  --color-border: #d5c4a1;
+  --color-input: #d5c4a1;
+  --color-ring: #d65d0e;
+  --color-background: #fbf1c7;
+  --color-foreground: #3c3836;
+  --color-primary: #d65d0e;
+  --color-primary-foreground: #fbf1c7;
+  --color-secondary: #ebdbb2;
+  --color-secondary-foreground: #3c3836;
+  --color-muted: #ebdbb2;
+  --color-muted-foreground: #7c6f64;
+  --color-accent: #d65d0e;
+  --color-accent-foreground: #fbf1c7;
+  --color-destructive: #cc241d;
+  --color-destructive-foreground: #fbf1c7;
+  --color-popover: #fbf1c7;
+  --color-popover-foreground: #3c3836;
+}
+
+.dark {
+  --color-border: #504945;
+  --color-input: #504945;
+  --color-ring: #fe8019;
+  --color-background: #282828;
+  --color-foreground: #ebdbb2;
+  --color-primary: #fe8019;
+  --color-primary-foreground: #282828;
+  --color-secondary: #3c3836;
+  --color-secondary-foreground: #ebdbb2;
+  --color-muted: #3c3836;
+  --color-muted-foreground: #a89984;
+  --color-accent: #504945;
+  --color-accent-foreground: #fe8019;
+  --color-destructive: #fb4934;
+  --color-destructive-foreground: #282828;
+  --color-popover: #3c3836;
+  --color-popover-foreground: #ebdbb2;
+}
