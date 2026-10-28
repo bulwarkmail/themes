@@ -1,9 +1,9 @@
 {
-  "id": "thunderbird",
-  "name": "Thunderbird",
+  "id": "bolt",
+  "name": "Bolt",
   "version": "1.0.0",
   "author": "Bulwark Mail Community",
-  "description": "Faithful port of Mozilla Thunderbird Desktop's Bolt design system, with light and dark variants.",
+  "description": "Makes Bulwark look like the Thunderbird desktop app: its Bolt colours, compact rows and flat toolbars, in light and dark. Not affiliated with Mozilla.",
   "type": "theme",
   "variants": ["light", "dark"],
   "minAppVersion": "1.0.0",

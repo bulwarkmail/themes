@@ -1,7 +1,8 @@
-# Thunderbird Theme
+# Bolt Theme
 
-A faithful port of [Mozilla Thunderbird Desktop](https://www.thunderbird.net/)'s
-"Bolt" design-system palette for Bulwark Mail. Light + dark variants.
+Makes Bulwark Mail look like the [Thunderbird](https://www.thunderbird.net/)
+desktop app, using the palette of its "Bolt" design system. Light + dark
+variants. Not affiliated with or endorsed by Mozilla.
 
 This theme demonstrates the **Theme API v2** advanced manifest format. Every
 color is declared as a structured token in `manifest.json`, plus a sibling
@@ -53,18 +54,18 @@ you still get the Bolt color palette via `theme.css`.
 ## Installation
 
 ```bash
-cd thunderbird
-zip -r ../thunderbird.zip manifest.json theme.css skin.css
+cd bolt
+zip -r ../bolt.zip manifest.json theme.css skin.css
 ```
 
 Or on Windows:
 
 ```powershell
-cd thunderbird
-Compress-Archive -Path manifest.json, theme.css, skin.css -DestinationPath ..\thunderbird.zip
+cd bolt
+Compress-Archive -Path manifest.json, theme.css, skin.css -DestinationPath ..\bolt.zip
 ```
 
-Upload `thunderbird.zip` via **Admin → Themes** in Bulwark Mail.
+Upload `bolt.zip` via **Admin → Themes** in Bulwark Mail.
 
 ## Attribution
 

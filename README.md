@@ -130,7 +130,7 @@ Themes work by overriding CSS custom properties. Define colors for `:root` (ligh
 | [Gruvbox](gruvbox/)         | Light, Dark | Retro groove color scheme                                |
 | [Tokyo Night](tokyo-night/) | Light, Dark | Clean dark Tokyo-inspired palette                        |
 | [Rosé Pine](rose-pine/)     | Light, Dark | Soho vibes with natural, muted colors                    |
-| [Thunderbird](thunderbird/) | Light, Dark | Mozilla Thunderbird Desktop's "Bolt" design system (v2)  |
+| [Bolt](bolt/)               | Light, Dark | Looks like the Thunderbird desktop app (v2)              |
 
 ### Built-in themes (included with Bulwark Mail)
 
@@ -296,7 +296,7 @@ before it's injected, via the `themeHooks.onThemeBeforeApply` transform hook:
 api.themeHooks.onThemeBeforeApply.register((css, ctx) => {
   // ctx = { themeId: string | null, variant: 'light' | 'dark' }
   // Return a new CSS string to override, or undefined to pass through.
-  if (ctx.themeId === 'thunderbird' && ctx.variant === 'dark') {
+  if (ctx.themeId === 'bolt' && ctx.variant === 'dark') {
     return css + '\n.dark { --color-primary: #88e0ff; }';
   }
 });
