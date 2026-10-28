@@ -1,0 +1,300 @@
+/*
+ * Thunderbird skin for Bulwark Mail
+ *
+ * Component-level overrides (Theme API v2 `skin.css`) that reshape the
+ * webmail UI to match Mozilla Thunderbird Desktop's actual look — compact
+ * rows, flat 3px-radius toolbar buttons, system fonts, tight folder tree,
+ * tabular email list, no avatars in the message list, and Thunderbird's
+ * subtle 1px pane separators.
+ *
+ * Targets stable hooks only:
+ *   - `body[data-theme-skin="thunderbird"]` — set by the theme loader
+ *   - `[data-tour="..."]` — stable component anchors
+ *   - `[role="..."]` — semantic roles
+ *   - Tailwind utility classes that compile straight through
+ */
+
+/* ─── 1. Base typography & font sizing ────────────────────────────── */
+
+body[data-theme-skin="thunderbird"] {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body[data-theme-skin="thunderbird"] .text-sm {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+body[data-theme-skin="thunderbird"] .text-xs {
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* ─── 2. Pane dividers — Thunderbird uses crisp 1px lines ─────────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"],
+body[data-theme-skin="thunderbird"] [data-tour="email-list"],
+body[data-theme-skin="thunderbird"] [data-tour="email-viewer"] {
+  border-right: 1px solid var(--color-border);
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="email-viewer"] {
+  border-right: none;
+}
+
+/* ─── 3. Navigation rail = Thunderbird's "Spaces" toolbar ─────────── */
+
+body[data-theme-skin="thunderbird"] [role="navigation"] {
+  background-color: var(--color-sidebar);
+  border-right: 1px solid var(--color-sidebar-border);
+}
+
+body[data-theme-skin="thunderbird"] [data-tour^="nav-"] {
+  border-radius: var(--radius-md);
+  margin: 1px 0;
+  transition: background-color 0.08s linear;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour^="nav-"]:hover {
+  background-color: var(--color-accent);
+}
+
+body[data-theme-skin="thunderbird"] [data-tour^="nav-"][aria-current="page"] {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+  box-shadow: inset 2px 0 0 var(--color-primary);
+}
+
+/* ─── 4. Folder tree (sidebar) — Thunderbird tight indented tree ──── */
+
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"] {
+  background-color: var(--color-sidebar);
+  font-size: 13px;
+  padding-block: 2px;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"] button,
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"] a {
+  border-radius: var(--radius-sm);
+  min-height: var(--density-row-height);
+  padding-block: 0;
+  font-weight: 400;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"] .font-bold,
+body[data-theme-skin="thunderbird"] [data-tour="sidebar"] .font-semibold {
+  font-weight: 600;
+}
+
+/* ─── 5. Email list — Thunderbird's compact row table ─────────────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] {
+  background-color: var(--color-background);
+  font-size: 13px;
+}
+
+/* Tighten every list row to Thunderbird's ~28px compact height. */
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] [style*="--list-item-height"],
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] [style*="list-item-height"] {
+  --list-item-height: var(--density-row-height) !important;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] > * > * {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Hide the avatar circles in the message list — Thunderbird's classic
+   table view has no avatars by default. The viewer keeps them. */
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] [data-testid="avatar"] {
+  display: none !important;
+}
+
+/* Selected row uses the strong Thunderbird selection blue. */
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] .bg-selection,
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] .bg-selection\/60 {
+  background-color: var(--color-primary) !important;
+  color: var(--color-primary-foreground) !important;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] .bg-selection *,
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] .bg-selection\/60 * {
+  color: var(--color-primary-foreground) !important;
+}
+
+/* Unread rows in Thunderbird are bold but not background-tinted. */
+body[data-theme-skin="thunderbird"] [data-tour="email-list"] .bg-warning\/10 {
+  background-color: transparent !important;
+}
+
+/* ─── 6. Email viewer — Thunderbird message header style ──────────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="email-viewer"] {
+  background-color: var(--color-background);
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="email-viewer"] header,
+body[data-theme-skin="thunderbird"] [data-tour="email-viewer"] [class*="bg-card"] {
+  background-color: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ─── 7. Toolbar — Thunderbird flat squared button strip ──────────── */
+
+body[data-theme-skin="thunderbird"] [role="toolbar"] {
+  background-color: var(--color-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4px 6px;
+  gap: 2px;
+}
+
+body[data-theme-skin="thunderbird"] [role="toolbar"] button {
+  border-radius: var(--radius-md);
+  height: var(--density-control-height);
+  padding-inline: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: background-color 0.08s linear, border-color 0.08s linear;
+}
+
+body[data-theme-skin="thunderbird"] [role="toolbar"] button:hover {
+  background-color: var(--color-muted);
+  border-color: var(--color-border);
+}
+
+body[data-theme-skin="thunderbird"] [role="toolbar"] button:active {
+  background-color: var(--color-accent);
+  border-color: var(--color-primary);
+}
+
+/* ─── 8. Generic buttons — Thunderbird's 3px-radius style ─────────── */
+
+body[data-theme-skin="thunderbird"] button.rounded-md,
+body[data-theme-skin="thunderbird"] a.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+body[data-theme-skin="thunderbird"] button.shadow-sm,
+body[data-theme-skin="thunderbird"] button.shadow {
+  box-shadow: none;
+}
+
+/* Compose button — Thunderbird's "Write" toolbar primary action. */
+body[data-theme-skin="thunderbird"] [data-tour="compose-button"] {
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 85%, black);
+  height: var(--density-control-height);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="compose-button"]:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 85%, black);
+}
+
+/* ─── 9. Search input — Thunderbird's quick-filter bar ────────────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="search-input"],
+body[data-theme-skin="thunderbird"] [data-search-input] {
+  border-radius: var(--radius-md);
+  height: var(--density-control-height);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  padding-inline-start: 28px;
+  font-size: 12px;
+  box-shadow: none;
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="search-input"]:focus,
+body[data-theme-skin="thunderbird"] [data-search-input]:focus {
+  border-color: var(--color-primary);
+  outline: 1px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* ─── 10. Composer — Thunderbird "Write" window styling ───────────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="composer"] {
+  background-color: var(--color-background);
+}
+
+body[data-theme-skin="thunderbird"] [data-tour="composer"] input,
+body[data-theme-skin="thunderbird"] [data-tour="composer"] textarea {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  font-size: 13px;
+}
+
+/* ─── 11. Tabs / context menus / popovers — small radius + crisp ──── */
+
+body[data-theme-skin="thunderbird"] [role="menu"],
+body[data-theme-skin="thunderbird"] [role="menubar"] {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-popover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+}
+
+body[data-theme-skin="thunderbird"] [role="menuitem"] {
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  min-height: var(--density-row-height);
+}
+
+body[data-theme-skin="thunderbird"] [role="menuitem"]:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+/* ─── 12. Storage quota / status bar — Thunderbird footer feel ────── */
+
+body[data-theme-skin="thunderbird"] [data-tour="storage-quota"] {
+  font-size: 11px;
+  color: var(--color-muted-foreground);
+}
+
+/* ─── 13. Scrollbars — Thunderbird's thin 8px native style ────────── */
+
+body[data-theme-skin="thunderbird"] *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body[data-theme-skin="thunderbird"] *::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: var(--radius-full);
+}
+
+body[data-theme-skin="thunderbird"] *::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-muted-foreground);
+}
+
+/* ─── 14. Inputs — Thunderbird's flat field style ────────────────── */
+
+body[data-theme-skin="thunderbird"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+body[data-theme-skin="thunderbird"] select,
+body[data-theme-skin="thunderbird"] textarea {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-input);
+  font-size: 13px;
+}
+
+body[data-theme-skin="thunderbird"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+body[data-theme-skin="thunderbird"] select:focus,
+body[data-theme-skin="thunderbird"] textarea:focus {
+  border-color: var(--color-ring);
+  outline: 1px solid var(--color-ring);
+  outline-offset: -2px;
+}

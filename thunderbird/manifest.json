@@ -1,0 +1,134 @@
+{
+  "id": "thunderbird",
+  "name": "Thunderbird",
+  "version": "1.0.0",
+  "author": "Bulwark Mail Community",
+  "description": "Faithful port of Mozilla Thunderbird Desktop's Bolt design system, with light and dark variants.",
+  "type": "theme",
+  "variants": ["light", "dark"],
+  "minAppVersion": "1.0.0",
+
+  "apiVersion": 2,
+  "derive": false,
+  "density": "compact",
+  "radii": {
+    "sm": "2px",
+    "md": "3px",
+    "lg": "6px",
+    "xl": "9px",
+    "full": "9999px"
+  },
+  "typography": {
+    "fontSans": "system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif",
+    "fontMono": "ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace",
+    "baseFontSize": "14px"
+  },
+
+  "tokens": {
+    "light": {
+      "border": "#d9d9de",
+      "input": "#d9d9de",
+      "ring": "#1373d9",
+
+      "background": "#feffff",
+      "foreground": "#1a202c",
+
+      "primary": "#1373d9",
+      "primary-foreground": "#ffffff",
+
+      "secondary": "#f7f7f7",
+      "secondary-foreground": "#1a202c",
+
+      "muted": "#f7f7f7",
+      "muted-foreground": "#737584",
+
+      "accent": "#f0f8ff",
+      "accent-foreground": "#1373d9",
+
+      "destructive": "#991b1b",
+      "destructive-foreground": "#ffffff",
+
+      "popover": "#feffff",
+      "popover-foreground": "#1a202c",
+
+      "sidebar": "#f7f7f7",
+      "sidebar-foreground": "#1a202c",
+      "sidebar-border": "#d9d9de",
+      "sidebar-accent": "#f0f8ff",
+      "sidebar-accent-foreground": "#1373d9",
+
+      "card": "#feffff",
+      "card-foreground": "#1a202c",
+
+      "success": "#1d783b",
+      "success-foreground": "#ffffff",
+      "warning": "#facc15",
+      "warning-foreground": "#713f12",
+      "info": "#1373d9",
+      "info-foreground": "#ffffff",
+
+      "selection": "#f0f8ff",
+      "selection-foreground": "#1373d9",
+      "unread": "#1373d9",
+
+      "chart-1": "#1373d9",
+      "chart-2": "#1d783b",
+      "chart-3": "#facc15",
+      "chart-4": "#dc2626",
+      "chart-5": "#6b21a8"
+    },
+
+    "dark": {
+      "border": "#3d4d67",
+      "input": "#3d4d67",
+      "ring": "#58c9ff",
+
+      "background": "#1a202c",
+      "foreground": "#eeeef0",
+
+      "primary": "#58c9ff",
+      "primary-foreground": "#1a202c",
+
+      "secondary": "#262d3b",
+      "secondary-foreground": "#eeeef0",
+
+      "muted": "#262d3b",
+      "muted-foreground": "#7f94ac",
+
+      "accent": "#262c40",
+      "accent-foreground": "#58c9ff",
+
+      "destructive": "#fca5a5",
+      "destructive-foreground": "#1a202c",
+
+      "popover": "#262d3b",
+      "popover-foreground": "#eeeef0",
+
+      "sidebar": "#1a202c",
+      "sidebar-foreground": "#eeeef0",
+      "sidebar-border": "#3d4d67",
+      "sidebar-accent": "#262d3b",
+      "sidebar-accent-foreground": "#58c9ff",
+
+      "card": "#262d3b",
+      "card-foreground": "#eeeef0",
+
+      "success": "#55d37e",
+      "success-foreground": "#1a202c",
+      "warning": "#fdd847",
+      "warning-foreground": "#1a202c",
+      "info": "#58c9ff",
+      "info-foreground": "#1a202c",
+
+      "selection": "rgba(88, 201, 255, 0.25)",
+      "selection-foreground": "#58c9ff",
+      "unread": "#58c9ff",
+
+      "chart-1": "#58c9ff",
+      "chart-2": "#55d37e",
+      "chart-3": "#fdd847",
+      "chart-4": "#fca5a5",
+      "chart-5": "#ae55f7"
+    }
+  }
+}
